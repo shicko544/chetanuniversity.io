@@ -3,105 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的博客</title>
+    <title>SHicko的小窝</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background: #333;
+            background-color: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
         nav {
-            background: #444;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
         }
         nav a {
             color: #fff;
-            margin: 0 15px;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #ff6347;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 20px auto;
-            background: #fff;
             padding: 20px;
+            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-in-out;
         }
-        .post {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        h1, h2 {
+            color: #333;
         }
-        .post h2 {
-            margin-top: 0;
-        }
-        .post p {
-            margin: 10px 0;
-        }
-        .post .meta {
-            font-size: 0.9em;
-            color: #777;
+        p {
+            line-height: 1.6;
         }
         footer {
-            background: #333;
-            color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
             margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>我的博客</h1>
+        <h1>SHicko的小窝</h1>
     </header>
-
     <nav>
-        <a href="#">首页</a>
-        <a href="#">关于</a>
-        <a href="#">联系</a>
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#blog">博客</a>
+        <a href="#contact">联系</a>
     </nav>
-
     <div class="container">
-        <div class="post">
-            <h2>第一篇博客文章</h2>
-            <p class="meta">发布日期：2023年10月1日 | 作者：张三</p>
-            <p>这是我的第一篇博客文章。在这里，我将分享一些关于技术、生活和学习的想法。希望你能从中找到有用的信息。</p>
-            <a href="#">阅读更多</a>
-        </div>
-
-        <div class="post">
-            <h2>第二篇博客文章</h2>
-            <p class="meta">发布日期：2023年10月5日 | 作者：李四</p>
-            <p>这是我的第二篇博客文章。在这篇文章中，我将讨论一些关于前端开发的最新趋势和工具。</p>
-            <a href="#">阅读更多</a>
-        </div>
-
-        <div class="post">
-            <h2>第三篇博客文章</h2>
-            <p class="meta">发布日期：2023年10月10日 | 作者：王五</p>
-            <p>这是我的第三篇博客文章。在这篇文章中，我将分享一些关于如何提高编程效率的技巧。</p>
-            <a href="#">阅读更多</a>
-        </div>
+        <section id="home">
+            <h2>欢迎来到我的博客</h2>
+            <p>这是我的个人博客，我会在这里分享我的想法、经验和学习心得。</p>
+        </section>
+        <section id="about">
+            <h2>关于我</h2>
+            <p>我是一个热爱编程和写作的人，喜欢分享知识和经验。</p>
+        </section>
+        <section id="blog">
+            <h2>博客文章</h2>
+            <p>博客文章而已。</p>
+        </section>
+        <section id="contact">
+            <h2>联系我</h2>
+            <p>你可以通过电子邮件联系我：3536113162@qq.com</p>
+            <p>备用电子邮件：githuan9@gmail.com</p>
+        </section>
     </div>
-
     <footer>
-        <p>&copy; 2023 我的博客. 保留所有权利。</p>
+        <p>&copy; 2024 SHicko的小窝</p>
     </footer>
-
 </body>
 </html>
