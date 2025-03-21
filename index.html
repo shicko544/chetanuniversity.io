@@ -1,10 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .post h2 {
+            margin-top: 0;
+        }
+        .post p {
+            margin: 10px 0;
+        }
+        .post .meta {
+            font-size: 0.9em;
+            color: #777;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my GitHub Pages site.</p>
+
+    <header>
+        <h1>我的博客</h1>
+    </header>
+
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">关于</a>
+        <a href="#">联系</a>
+    </nav>
+
+    <div class="container">
+        <div class="post">
+            <h2>第一篇博客文章</h2>
+            <p class="meta">发布日期：2023年10月1日 | 作者：张三</p>
+            <p>这是我的第一篇博客文章。在这里，我将分享一些关于技术、生活和学习的想法。希望你能从中找到有用的信息。</p>
+            <a href="#">阅读更多</a>
+        </div>
+
+        <div class="post">
+            <h2>第二篇博客文章</h2>
+            <p class="meta">发布日期：2023年10月5日 | 作者：李四</p>
+            <p>这是我的第二篇博客文章。在这篇文章中，我将讨论一些关于前端开发的最新趋势和工具。</p>
+            <a href="#">阅读更多</a>
+        </div>
+
+        <div class="post">
+            <h2>第三篇博客文章</h2>
+            <p class="meta">发布日期：2023年10月10日 | 作者：王五</p>
+            <p>这是我的第三篇博客文章。在这篇文章中，我将分享一些关于如何提高编程效率的技巧。</p>
+            <a href="#">阅读更多</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 我的博客. 保留所有权利。</p>
+    </footer>
+
 </body>
 </html>
