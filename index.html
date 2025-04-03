@@ -18,10 +18,25 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-image: url('https://source.unsplash.com/random/1920x1080/?nature,abstract');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
         }
+        
+        /* 毛玻璃效果层 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        
         header {
             background-color: rgba(51, 51, 51, 0.8);
             color: #fff;
@@ -47,11 +62,14 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
         }
         
         nav a:hover {
             color: #ff6347;
+            background-color: rgba(255, 255, 255, 0.1);
         }
         
         .container {
@@ -67,17 +85,24 @@
         
         section {
             min-height: 60vh;
-            padding: 20px 0;
-            scroll-margin-top: 60px; /* 防止导航栏遮挡 */
+            padding: 30px 0;
+            scroll-margin-top: 60px;
         }
         
         h1, h2 {
             color: #333;
+            margin-top: 0;
+        }
+        
+        h2 {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
         }
         
         p {
             line-height: 1.8;
             font-size: 16px;
+            margin-bottom: 1.5em;
         }
         
         footer {
@@ -91,12 +116,8 @@
         }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         @keyframes slideIn {
@@ -114,7 +135,8 @@
         a {
             color: #1a73e8;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
         
         a:hover {
@@ -122,10 +144,59 @@
             text-decoration: underline;
         }
         
-        /* 活动部分高亮 */
-        section:target {
-            background-color: rgba(255, 255, 255, 0.95);
-            transition: background-color 0.5s ease;
+        /* Spotify播放器样式 */
+        .spotify-player {
+            margin: 30px auto;
+            max-width: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        /* 社交媒体链接 */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 15px;
+            background-color: rgba(26, 115, 232, 0.1);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: rgba(26, 115, 232, 0.2);
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 10px 5px;
+            }
+            
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+            
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            section {
+                min-height: auto;
+                padding: 20px 0;
+            }
         }
     </style>
 </head>
@@ -135,49 +206,53 @@
     </header>
     <nav>
         <a href="#home">首页</a>
-        <a href="#about">关于</a>
-        <a href="#blog">博客</a>
-        <a href="#contact">联系</a>
+        <a href="#about">关于我</a>
+        <a href="#blog">我的博客</a>
+        <a href="#contact">联系我</a>
     </nav>
     <div class="container">
         <section id="home">
             <h2>欢迎来到SHicko的小窝</h2>
-            <p>你好啊，我是SHicko，或者_NeonDreamer_或者Gitruan。</p>
+            <p>你好啊，我是SHicko，也可以叫我_NeonDreamer_或Gitruan。</p>
             <p>点击导航栏的链接可以跳转到页面的不同部分。</p>
-            <p></p>
-            <iframe 
-            src="https://open.spotify.com/track/7zxz9xLJvou9iSRYiIq3TX?si=fSq6Uu_0Sa2s3IbIO3Zi8w" 
-            width="300" 
-            height="380" 
-            frameborder="0" 
-            allowtransparency="true" 
-            allow="encrypted-media"
-            style="border-radius: 12px; margin: 20px 0;">
-        </iframe>
-    </div>
+            
+            <div class="spotify-player">
+                <iframe 
+                    src="https://open.spotify.com/embed/track/7zxz9xLJvou9iSRYiIq3TX" 
+                    width="100%" 
+                    height="380" 
+                    frameborder="0" 
+                    allowtransparency="true" 
+                    allow="encrypted-media">
+                </iframe>
+            </div>
         </section>
         
         <section id="about">
             <h2>关于我</h2>
             <p>13岁，中学生，来自广东</p>
-            <p>热爱IT，一名OIer，车万人，Minecraft，Pizza Tower，Cuphead...</p>
+            <p>热爱IT，一名OIer，车万人，喜欢Minecraft、Pizza Tower、Cuphead等游戏。</p>
         </section>
         
         <section id="blog">
             <h2>我的博客</h2>
-            <p>一些博客文章(虽然什么都没有就是了)</p>
+            <p>这里将会分享我的技术文章、学习笔记和生活感悟。</p>
+            <p>虽然目前内容啥TM也没有，但我不会持续更新的！</p>
         </section>
         
         <section id="contact">
             <h2>联系我</h2>
-            <p>你可以通过电子邮件联系我：<a href="mailto:3536113162@qq.com">3536113162@qq.com</a></p>
-            <p>或者通过社交媒体平台找到我：</p>
-            <p>X：<a href="https://x.com/gitruan66477">3@gitruan66477</a></p>
-            <p>BiliBili <a href="https://b23.tv/GZwRrsG">@_NeonDreamer_</a></p>
+            <p>你可以通过以下方式联系我：</p>
+            <p>电子邮件：<a href="mailto:3536113162@qq.com">3536113162@qq.com</a></p>
+            
+            <div class="social-links">
+                <a href="https://x.com/gitruan66477" target="_blank">X (Twitter)</a>
+                <a href="https://b23.tv/GZwRrsG" target="_blank">哔哩哔哩</a>
+            </div>
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 SHicko的小窝</p>
+        <p>&copy; 2025 SHicko的小窝 | 由SHicko制作</p>
     </footer>
 </body>
 </html>
