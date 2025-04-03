@@ -5,26 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHicko的小窝</title>
     <style>
+        /* 导入思源宋体 */
+        @font-face {
+            font-family: 'Source Han Serif CN';
+            src: url('https://cdn.jsdelivr.net/npm/source-han-serif@1.0.0/SourceHanSerifCN-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Source Han Serif CN', serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
+            background-image: url('https://img.hdbz.net/thumbs/2021/0116/43133.jpg?x-oss-process=style/w_1330-h_870');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
         }
+        
+        /* 毛玻璃效果层 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: blur(8px);
+            z-index: -1;
+        }
+        
         header {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             color: #fff;
             padding: 20px 0;
             text-align: center;
             animation: fadeIn 2s ease-in-out;
+            backdrop-filter: blur(5px);
         }
+        
         nav {
             display: flex;
             justify-content: center;
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.8);
             padding: 10px 0;
+            backdrop-filter: blur(5px);
         }
+        
         nav a {
             color: #fff;
             text-decoration: none;
@@ -32,31 +61,41 @@
             font-weight: bold;
             transition: color 0.3s ease;
         }
+        
         nav a:hover {
             color: #ff6347;
         }
+        
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             animation: slideIn 1.5s ease-in-out;
+            border-radius: 8px;
+            backdrop-filter: blur(3px);
         }
+        
         h1, h2 {
             color: #333;
         }
+        
         p {
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 16px;
         }
+        
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             color: #fff;
             margin-top: 20px;
             animation: fadeIn 2s ease-in-out;
+            backdrop-filter: blur(5px);
         }
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -65,6 +104,7 @@
                 opacity: 1;
             }
         }
+        
         @keyframes slideIn {
             from {
                 transform: translateY(50px);
@@ -75,6 +115,18 @@
                 opacity: 1;
             }
         }
+        
+        /* 链接样式 */
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -82,10 +134,10 @@
         <h1>SHicko的小窝</h1>
     </header>
     <nav>
-        <a href="index.html">首页</a> <!-- 指向首页 -->
-        <a href="about.html">关于</a> <!-- 指向关于页面 -->
-        <a href="blog.html">博客</a> <!-- 指向博客页面 -->
-        <a href="contact.html">联系</a> <!-- 指向联系页面 -->
+        <a href="index.html">首页</a>
+        <a href="pages/about.html">关于</a>
+        <a href="pages/blog.html">博客</a>
+        <a href="pages/contact.html">联系</a>
     </nav>
     <div class="container">
         <section id="home">
