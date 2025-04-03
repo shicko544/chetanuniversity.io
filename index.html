@@ -52,6 +52,9 @@
             background-color: rgba(68, 68, 68, 0.8);
             padding: 10px 0;
             backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         nav a {
@@ -75,6 +78,12 @@
             animation: slideIn 1.5s ease-in-out;
             border-radius: 8px;
             backdrop-filter: blur(3px);
+        }
+        
+        section {
+            min-height: 60vh;
+            padding: 20px 0;
+            scroll-margin-top: 60px; /* 防止导航栏遮挡 */
         }
         
         h1, h2 {
@@ -127,6 +136,12 @@
             color: #0d47a1;
             text-decoration: underline;
         }
+        
+        /* 活动部分高亮 */
+        section:target {
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: background-color 0.5s ease;
+        }
     </style>
 </head>
 <body>
@@ -134,19 +149,46 @@
         <h1>SHicko的小窝</h1>
     </header>
     <nav>
-        <a href="main/index.html">首页</a>
-        <a href="pages/about.html">关于</a>
-        <a href="pages/blog.html">博客</a>
-        <a href="pages/contact.html">联系</a>
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#blog">博客</a>
+        <a href="#contact">联系</a>
     </nav>
     <div class="container">
         <section id="home">
             <h2>欢迎来到SHicko的小窝</h2>
-            <p>这是我的个人博客，我会在这里分享我的想法、经验和学习心得。</p>
+            <p>你好啊，我是SHicko，或者_NeonDreamer_或者Gitruan。</p>
+            <p>点击导航栏的链接可以跳转到页面的不同部分。</p>
+            <p></p>
+            <iframe 
+            src="https://open.spotify.com/track/7zxz9xLJvou9iSRYiIq3TX?si=fSq6Uu_0Sa2s3IbIO3Zi8w" 
+            width="300" 
+            height="380" 
+            frameborder="0" 
+            allowtransparency="true" 
+            allow="encrypted-media"
+            style="border-radius: 12px; margin: 20px 0;">
+        </iframe>
+    </div>
         </section>
+        
+        <section id="about">
+            <h2>关于我</h2>
+            <p>13岁，中学生，来自广东</p>
+            <p>热爱IT，一名OIer，车万人，Minecraft，Pizza Tower，Cuphead...</p>
+        </section>
+        
+        <section id="blog">
+            <h2>我的博客</h2>
+            <p>一些博客文章(虽然什么都没有就是了)</p>
+        </section>
+        
         <section id="contact">
             <h2>联系我</h2>
             <p>你可以通过电子邮件联系我：<a href="mailto:3536113162@qq.com">3536113162@qq.com</a></p>
+            <p>或者通过社交媒体平台找到我：</p>
+            <p>X：<a href="https://x.com/gitruan66477">3@gitruan66477</a></p>
+            <p>BiliBili <a href="https://b23.tv/GZwRrsG">@_NeonDreamer_</a></p>
         </section>
     </div>
     <footer>
