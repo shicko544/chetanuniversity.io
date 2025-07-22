@@ -1,469 +1,121 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>車丹大學 | CU</title>
+    <title>车丹大学 - ChetanUniversity”</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Microsoft JhengHei', Arial, sans-serif;
-        }
-        
         body {
-            line-height: 1.6;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            background-color: #f0f0f0;
             color: #333;
-        }
-        
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 60px;
-            margin-right: 15px;
-        }
-        
-        .logo-text h1 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-        
-        .logo-text p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #FFCC00;
-        }
-        
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
-            color: white;
-        }
-        
-        .hero-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #FFCC00;
-            color: #003366;
-            padding: 10px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #e6b800;
-        }
-        
-        .section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #003366;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-card i {
-            font-size: 3rem;
-            color: #003366;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 15px;
-            color: #003366;
-        }
-        
-        .news-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .news-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        
-        .news-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .news-content {
+            margin: 0;
             padding: 20px;
         }
-        
-        .news-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
+        header {
+            background-color: #ff4d4d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
-        
-        .news-card h3 {
-            margin-bottom: 10px;
-        }
-        
-        footer {
-            background-color: #003366;
+        header h1 {
+            font-size: 3em;
             color: white;
-            padding: 50px 20px 20px;
+            text-shadow: 2px 2px #000;
         }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        nav {
+            margin: 20px 0;
         }
-        
-        .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
+        nav a {
+            margin: 0 15px;
             text-decoration: none;
-            transition: color 0.3s;
+            color: #ff4d4d;
+            font-weight: bold;
         }
-        
-        .footer-column ul li a:hover {
-            color: #FFCC00;
+        nav a:hover {
+            color: #ffd700;
         }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .meme {
+            font-style: italic;
+            color: #666;
+        }
+        .course-list li {
+            list-style-type: none;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        footer {
             margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
         }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 20px;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero-content h2 {
-                font-size: 2rem;
-            }
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin: 10px;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-text">
-                    <h1>車丹大學</h1>
-                    <p>Chetan University</p>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">首頁</a></li>
-                    <li><a href="#about">關於我們</a></li>
-                    <li><a href="#academics">學術單位</a></li>
-                    <li><a href="#admissions">招生資訊</a></li>
-                    <li><a href="#contact">聯絡我們</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>欢迎来到车丹大学</h1>
+        <p>一个收录各种中文波兰球圈贵物的虚拟互联网学校</p>
     </header>
-    
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h2>追求卓越 創造未來</h2>
-            <p>車丹大學致力於提供高品質的教育環境，培養具備專業知識與人文素養的未來領袖。</p>
-            <a href="#admissions" class="btn">立即申請</a>
-        </div>
-    </section>
-    
-    <section class="section" id="about">
-        <h2 class="section-title">關於車丹大學</h2>
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>卓越教育</h3>
-                <p>我們擁有國際認證的課程和優秀的師資團隊，提供學生最優質的教育體驗。</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-flask"></i>
-                <h3>尖端研究</h3>
-                <p>在多個研究領域處於領先地位，與產業界緊密合作，推動科技創新。</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-globe-asia"></i>
-                <h3>國際視野</h3>
-                <p>與全球超過100所大學建立合作關係，提供豐富的國際交流機會。</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section" id="academics">
-        <h2 class="section-title">學術單位</h2>
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>資訊工程學院</h3>
-                <p>培養具備創新思維與實作能力的資訊科技人才，課程涵蓋AI、大數據、雲端計算等領域。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">了解更多</a>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-atom"></i>
-                <h3>理工學院</h3>
-                <p>提供物理、化學、數學等基礎科學教育，結合跨領域應用，培養科學研究人才。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">了解更多</a>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-business-time"></i>
-                <h3>管理學院</h3>
-                <p>結合理論與實務，培養具備國際觀與創新思維的商業管理人才。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">了解更多</a>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section" id="admissions">
-        <h2 class="section-title">招生資訊</h2>
-        <div class="features">
-            <div class="feature-card">
-                <i class="fas fa-user-graduate"></i>
-                <h3>大學部招生</h3>
-                <p>提供多元入學管道，包括考試分發、個人申請、特殊選才等。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">招生簡章</a>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-user-tie"></i>
-                <h3>研究所招生</h3>
-                <p>碩士班、博士班招生資訊，提供研究獎學金與助學金機會。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">招生簡章</a>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-globe"></i>
-                <h3>國際學生</h3>
-                <p>歡迎國際學生申請，提供英語授課課程與國際學生輔導服務。</p>
-                <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">申請資訊</a>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section">
-        <h2 class="section-title">最新消息</h2>
-        <div class="news-container">
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200" alt="新聞圖片">
-                <div class="news-content">
-                    <div class="news-date">2023年10月15日</div>
-                    <h3>本校榮獲教育部教學卓越計畫補助</h3>
-                    <p>車丹大學連續五年獲得教育部教學卓越計畫補助，總金額達美元五千萬元...</p>
-                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">閱讀更多</a>
-                </div>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200" alt="新聞圖片">
-                <div class="news-content">
-                    <div class="news-date">2023年10月10日</div>
-                    <h3>與美國知名大學簽訂雙聯學位協議</h3>
-                    <p>本校與美國加州理工學院簽訂雙聯學位協議，學生可同時獲得兩校學位...</p>
-                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">閱讀更多</a>
-                </div>
-            </div>
-            <div class="news-card">
-                <img src="https://via.placeholder.com/400x200" alt="新聞圖片">
-                <div class="news-content">
-                    <div class="news-date">2023年10月5日</div>
-                    <h3>校園開放日活動預告</h3>
-                    <p>11月15日將舉辦校園開放日，歡迎高中學生及家長參觀校園設施與課程展示...</p>
-                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">閱讀更多</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="section" id="contact">
-        <h2 class="section-title">聯絡我們</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="margin-bottom: 30px;">如有任何問題，歡迎透過以下方式與我們聯繫，我們將盡快回覆您的訊息。</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
-                <div>
-                    <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #003366; margin-bottom: 15px;"></i>
-                    <h3>地址</h3>
-                    <p>106台北市大安區大學路1號</p>
-                </div>
-                <div>
-                    <i class="fas fa-phone" style="font-size: 2rem; color: #003366; margin-bottom: 15px;"></i>
-                    <h3>電話</h3>
-                    <p>+886-2-12345678</p>
-                </div>
-                <div>
-                    <i class="fas fa-envelope" style="font-size: 2rem; color: #003366; margin-bottom: 15px;"></i>
-                    <h3>電子郵件</h3>
-                    <p>chetanuni@outlook.com</p>
-                </div>
-            </div>
-            <a href="#" class="btn">線上聯絡表單</a>
-        </div>
-    </section>
-    
+
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于我们</a>
+        <a href="#people">名人</a>
+        <a href="#admission">招生</a>
+        <a href="#contact">联系我们</a>
+    </nav>
+
+    <div class="content" id="home">
+        <h2>欢迎来到车丹大学！</h2>
+        <p>这里是中文波兰球圈的贵物刷怪笼，专门收录那些在波兰球圈里闹出笑话的BYDer们，欢迎您的投稿</p>
+    </div>
+
+    <div class="content" id="about">
+        <h2>关于车丹大学</h2>
+        <p>车丹大学（Chetan University），由老方成立于2023年5月3日，我们致力于收录更多的中文波兰球圈教授。</p>
+        <p>在画世界创办，目前主要在画世界和QQ活跃，有X分部</p>
+    </div>
+
+    <div class="content" id="people">
+        <h2>知名校友/教授/h2>
+        <ul class="course-list">
+            <li>老方(@LaoFang_Object)：车丹大学创始人，伟大无需多言</li>
+            <li>浩浩：火烧寅卯，开盒失误，车丹大学元老级人物</li>
+            <li>星之加勒比：圈拳权学代表人物</li>
+            <li>：被群友喷了怎么办？在线教你花式自救！</li>
+            <li>《波兰球画风进阶》：从手残到能画出“愤怒的波兰球”！</li>
+        </ul>
+    </div>
+
+    <div class="content" id="admission">
+        <h2>招生简章</h2>
+        <p>投稿要求：爆过逆天言论，干过逆天事，吵架有道德问题...</p>
+        <p>申请方式：在画世界 “车丹大学” 画题使用官方模板投稿，或找到相关人员投稿</p>
+    </div>
+
+    <div class="content" id="contact">
+        <h2>联系我们</h2>
+        <p> 邮箱：gitruan9@gmail.com</p>
+        <p> X：@Chetanuniversty</p>
+    </div>
+
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>快速連結</h3>
-                <ul>
-                    <li><a href="#">校園地圖</a></li>
-                    <li><a href="#">行事曆</a></li>
-                    <li><a href="#">圖書館</a></li>
-                    <li><a href="#">電子郵件</a></li>
-                    <li><a href="#">入口網站</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>學術資源</h3>
-                <ul>
-                    <li><a href="#">課程目錄</a></li>
-                    <li><a href="#">學術期刊</a></li>
-                    <li><a href="#">研究機構</a></li>
-                    <li><a href="#">教學發展中心</a></li>
-                    <li><a href="#">數位學習平台</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>行政單位</h3>
-                <ul>
-                    <li><a href="#">教務處</a></li>
-                    <li><a href="#">學務處</a></li>
-                    <li><a href="#">總務處</a></li>
-                    <li><a href="#">研發處</a></li>
-                    <li><a href="#">國際事務處</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>關注我們</h3>
-                <p>訂閱電子報以獲取最新消息與活動資訊</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2023 車丹大學 版權所有</p>
-        </div>
+        <p>&copy; 2025 车丹大学 | 版权所有</p>
+        <p>Powered by SHicko544</p>
     </footer>
 </body>
 </html>
